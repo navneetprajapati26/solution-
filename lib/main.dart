@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:solution/screens/auth/login/login.dart';
 import 'package:solution/screens/home/home.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor: Color(0xFFFFFF)
+    systemNavigationBarColor: Color(0xFFFFFF),
+    statusBarColor: Color(0xFFFFFF),
+    statusBarBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.dark,
+
   ));
   runApp(const MyApp());
 }
@@ -17,11 +22,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
