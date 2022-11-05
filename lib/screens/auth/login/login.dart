@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:solution/screens/auth/sign_up/sign_up.dart';
+import 'package:solution/utils/dimensions.dart';
 
 import '../../../utils/neomorphism/neomorphism_box.dart';
 import '../../home/home.dart';
@@ -24,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               //todo: login filed
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.all(Dimensions.SIZE_DEFAULT),
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -34,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               //todo: password filed
               Padding(
-                padding: const EdgeInsets.only(left: 18,top: 18,right: 18),
+                padding: const EdgeInsets.only(left: Dimensions.SIZE_SMALL,top: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_SMALL),
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -44,16 +45,16 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
 
               Padding(
-                padding: const EdgeInsets.only(left: 18,right: 18),
+                padding: const EdgeInsets.only(left: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_SMALL),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     CupertinoButton(
                       padding: EdgeInsets.zero,
-                      child: Text(
+                      child: const Text(
                         "Forget Password ?",
                         style: TextStyle(
-                          fontSize: 16
+                          fontSize: Dimensions.SIZE_DEFAULT
                             //fontWeight: FontWeight.bold
                         ),
                       ),
@@ -74,11 +75,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 50,
                   width: 350,
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.all(5.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
                       child: Text(
                         "Login",
-                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -88,11 +89,11 @@ class _LoginScreenState extends State<LoginScreen> {
               CupertinoButton(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Dont't have an account "),
+                    children: const [
+                      Text("Dont't have an account ",style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,),),
                       Text(
                         "Sign UP",
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                       )
                     ],
                   ),

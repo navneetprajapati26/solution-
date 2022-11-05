@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:solution/utils/dimensions.dart';
 
 import '../../../utils/neomorphism/neomorphism_box.dart';
 import '../login/login.dart';
@@ -27,7 +28,7 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
               children: [
                 //todo: Name filed
                 Padding(
-                  padding: const EdgeInsets.only(left: 18,top: 9,right: 18,bottom: 9),
+                  padding: const EdgeInsets.only(left: Dimensions.SIZE_DEFAULT,top: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_DEFAULT,bottom: Dimensions.SIZE_SMALL),
                   child: TextField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -37,7 +38,7 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
                 ),
                 //todo: Email filed
                 Padding(
-                  padding: const EdgeInsets.only(left: 18,top: 9,right: 18,bottom: 9),
+                  padding: const EdgeInsets.only(left: Dimensions.SIZE_DEFAULT,top: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_DEFAULT,bottom: Dimensions.SIZE_SMALL),
                   child: TextField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -47,7 +48,7 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
                 ),
                 //todo: password filed
                 Padding(
-                  padding: const EdgeInsets.only(left: 18,top: 9,right: 18,bottom: 9),
+                  padding: const EdgeInsets.only(left: Dimensions.SIZE_DEFAULT,top: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_DEFAULT,bottom: Dimensions.SIZE_SMALL),
                   child: TextField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -57,7 +58,7 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
                 ),
                 //todo: Conform Password filed
                 Padding(
-                  padding: const EdgeInsets.only(left: 18,top: 9,right: 18,bottom: 18),
+                  padding: const EdgeInsets.only(left: Dimensions.SIZE_DEFAULT,top: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_DEFAULT,bottom: Dimensions.SIZE_DEFAULT),
                   child: TextField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -76,10 +77,10 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
                     width: 350,
                     child: Container(
                       child: Padding(
-                        padding: const EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
                         child: Text(
                           "SignUP",
-                          style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -90,10 +91,12 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Alredy have an account "),
+                        Text("Alredy have an account ",
+                          style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,),
+                        ),
                         Text(
                           "Login",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                         )
                       ],
                     ),

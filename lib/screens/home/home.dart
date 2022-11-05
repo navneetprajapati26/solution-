@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:solution/utils/dimensions.dart';
 import 'package:solution/utils/neomorphism/neomorphism_box.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -40,14 +41,32 @@ class _HomeScreenState extends State<HomeScreen> {
               })
         ],
       ),
-      body: ListView.builder(
-        itemCount: 7,
-          itemBuilder: (context,index){
-          return Padding(
-            padding: const EdgeInsets.only(left: 10,right: 10,top: 10,bottom: 20),
-            child: NeuBox(height: 130, width: 200, child: Container(child: Text("S O L U T I O N"),)),
-          );
-          }
+      body: SingleChildScrollView(
+        physics: ScrollPhysics(),
+        child: Column(
+          children: [
+            ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 7,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(
+                        left: Dimensions.SIZE_SMALL, right: Dimensions.SIZE_SMALL, top: Dimensions.SIZE_SMALL, bottom: Dimensions.SIZE_LARGE),
+                    child: NeuBox(
+                        height: 130,
+                        width: 200,
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Icon(Icons.ac_unit,color: Colors.blue)
+                            ],
+                          )
+                        )),
+                  );
+                }),
+          ],
+        ),
       ),
     );
   }
