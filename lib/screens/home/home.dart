@@ -2,6 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:solution/utils/dimensions.dart';
 import 'package:solution/utils/neomorphism/neomorphism_box.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../utils/services_card.dart';
+import '../service/ServiceScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,6 +15,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void services_raout() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => ServicesScreen()));
+  }
+
+  List<String> Services_name = ["Astrologers", "Docter", "Lawyers"];
+  List<String> Services_logo = [
+    "assets/png/astrology_png_logo.png",
+    "assets/png/doctor_png_logo.png",
+    "assets/png/justice_png_logo.png"
+  ];
+  List<int> Services_color = [0xFF0077FF, 0xFF5CFC00, 0xFF343434];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,22 +65,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: 7,
+                itemCount: Services_logo.length,
                 itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(
-                        left: Dimensions.SIZE_SMALL, right: Dimensions.SIZE_SMALL, top: Dimensions.SIZE_SMALL, bottom: Dimensions.SIZE_LARGE),
-                    child: NeuBox(
-                        height: 130,
-                        width: 200,
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Icon(Icons.ac_unit,color: Colors.blue)
-                            ],
-                          )
-                        )),
-                  );
+                  return ServicesCard(
+                      service_name: Services_name[index],
+                      service_logo: Services_logo[index],
+                      coler: Services_color[index],
+                      route: services_raout);
                 }),
           ],
         ),
