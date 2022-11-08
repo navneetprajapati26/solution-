@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:solution/utils/services_card.dart';
 
+import '../../utils/service_provider_card.dart';
+
 class ServicesScreen extends StatefulWidget {
   const ServicesScreen({Key? key}) : super(key: key);
 
@@ -33,12 +35,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
                     shrinkWrap: true,
                     itemCount: 6,
                     itemBuilder: (context, index) {
-                      return ServicesCard(
-                        service_name: "Lawyers",
-                        service_logo: "assets/png/justice_png_logo.png",
-                        coler: 0xFF343434,
-                        route: () { },
-                      );
+                      return ServiceProvider();
                     }),
               ],
             ),
