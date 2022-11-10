@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Icon(
                 Icons.account_balance,
                 size: 100,
-                color: Colors.blue,
+                color: Color(0xFF343434),
               ),
             ),
             SizedBox(
@@ -45,9 +45,10 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               "Solution",
               style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue),
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF343434),
+              ),
             ),
             SizedBox(
               height: 30,
@@ -55,10 +56,13 @@ class _SplashScreenState extends State<SplashScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Powered by ", style: TextStyle(
-                    fontSize: 30,
-                    //fontWeight: FontWeight.bold,
-                    color: Colors.black12),),
+                Text(
+                  "Powered by ",
+                  style: TextStyle(
+                      fontSize: 30,
+                      //fontWeight: FontWeight.bold,
+                      color: Colors.black12),
+                ),
                 Text(
                   "Sofodel",
                   style: TextStyle(

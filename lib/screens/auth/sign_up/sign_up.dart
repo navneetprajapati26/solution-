@@ -80,7 +80,7 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
                         padding: const EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
                         child: Text(
                           "SignUP",
-                          style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Color(0xFF343434),fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -92,11 +92,11 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Alredy have an account ",
-                          style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,),
+                          style: TextStyle(color: Color(0xFF343434),fontSize: Dimensions.SIZE_DEFAULT,),
                         ),
                         Text(
                           "Login",
-                          style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Color(0xFF343434),fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                         )
                       ],
                     ),

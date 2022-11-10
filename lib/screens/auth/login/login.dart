@@ -38,6 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.only(left: Dimensions.SIZE_SMALL,top: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_SMALL),
                 child: TextField(
                   decoration: InputDecoration(
+
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30)),
                       labelText: "Password"),
@@ -54,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text(
                         "Forget Password ?",
                         style: TextStyle(
+                            color: Color(0xFF343434),
                           fontSize: Dimensions.SIZE_DEFAULT
                             //fontWeight: FontWeight.bold
                         ),
@@ -79,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding: EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
                       child: Text(
                         "Login",
-                        style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Color(0xFF343434),fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -90,10 +92,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Text("Dont't have an account ",style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,),),
+                      Text("Dont't have an account ",style: TextStyle(color: Color(0xFF343434),fontSize: Dimensions.SIZE_DEFAULT,),),
                       Text(
                         "Sign UP",
-                        style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Color(0xFF343434),fontSize: Dimensions.SIZE_DEFAULT,fontWeight: FontWeight.bold),
                       )
                     ],
                   ),

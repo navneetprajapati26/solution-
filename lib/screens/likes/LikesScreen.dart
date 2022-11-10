@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:solution/screens/home/home.dart';
-import 'package:solution/utils/services_card.dart';
 
 import '../../utils/bottem_navigetion_bar.dart';
 import '../../utils/custm_dilog_box.dart';
 import '../../utils/service_provider_card.dart';
 import '../service_provider_scareen/ServiceProviderScareen.dart';
 
-class ServicesScreen extends StatefulWidget {
-  const ServicesScreen({Key? key}) : super(key: key);
+class LikesScreen extends StatefulWidget {
+  const LikesScreen({Key? key}) : super(key: key);
 
   @override
-  State<ServicesScreen> createState() => _ServicesScreenState();
+  State<LikesScreen> createState() => _LikesScreenState();
 }
 
-class _ServicesScreenState extends State<ServicesScreen> {
+class _LikesScreenState extends State<LikesScreen> {
   void dialog_raout() {
     showDialog(
         context: context,
@@ -30,7 +27,8 @@ class _ServicesScreenState extends State<ServicesScreen> {
   }
 
   void service_provider_scareen_raout() {
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>serviceProviderScareen()));
+    Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: (context) => serviceProviderScareen()));
   }
 
   @override
@@ -40,7 +38,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
       appBar: AppBar(
         backgroundColor: Color(0xFF343434),
         title: Text(
-          "Lawyers",
+          "Likes",
           style: TextStyle(color: Colors.grey[300]),
         ),
         elevation: 0,
@@ -52,7 +50,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 50,
+                  height: 5,
                 ),
                 ListView.builder(
                     physics: NeverScrollableScrollPhysics(),
@@ -72,38 +70,13 @@ class _ServicesScreenState extends State<ServicesScreen> {
               ],
             ),
           ),
-          Container(
-            height: 50,
-            color: Color(0xFF343434),
-            alignment: Alignment.center,
-            child: ListView.builder(
-                //physics: NeverScrollableScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                itemCount: 6,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      //height: 10,
-                      // width: 80,
-                      decoration: BoxDecoration(
-                          //color: Colors.cyanAccent,
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: Colors.white70)),
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8, right: 8),
-                        child: Text(
-                          "lawyers",
-                          style: TextStyle(color: Colors.white70),
-                        ),
-                      ),
-                    ),
-                  );
-                }),
-          ),
         ],
+      ),
+      bottomNavigationBar: BottemNavBar(
+        home_BTN: () {},
+        likes_BTN: () {},
+        serch_BTN: () {},
+        profile_BTN: () {},
       ),
     );
   }
