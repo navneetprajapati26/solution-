@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:solution/screens/home/home.dart';
 import 'package:solution/utils/services_card.dart';
 
+import '../../utils/custm_dilog_box.dart';
 import '../../utils/service_provider_card.dart';
 
 class ServicesScreen extends StatefulWidget {
@@ -12,6 +14,13 @@ class ServicesScreen extends StatefulWidget {
 }
 
 class _ServicesScreenState extends State<ServicesScreen> {
+
+  void services_raout() {
+    showDialog(context: context, builder: (BuildContext context){
+      return CustmDilogBox();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,13 +39,14 @@ class _ServicesScreenState extends State<ServicesScreen> {
             physics: ScrollPhysics(),
             child: Column(
               children: [
+                SizedBox(height: 50,),
                 ListView.builder(
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 6,
                     itemBuilder: (context, index) {
-                      return ServiceProvider();
-                    }),
+                      return ServiceProvider(dilog: services_raout);
+                      })
               ],
             ),
           ),
@@ -54,15 +64,18 @@ class _ServicesScreenState extends State<ServicesScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       //height: 10,
-                     // width: 80,
+                      // width: 80,
                       decoration: BoxDecoration(
                           //color: Colors.cyanAccent,
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(color: Colors.white70)),
                       alignment: Alignment.center,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 8,right: 8),
-                        child: Text("lawyers",style: TextStyle(color: Colors.white70),),
+                        padding: const EdgeInsets.only(left: 8, right: 8),
+                        child: Text(
+                          "lawyers",
+                          style: TextStyle(color: Colors.white70),
+                        ),
                       ),
                     ),
                   );

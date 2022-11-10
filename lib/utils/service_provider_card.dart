@@ -4,7 +4,8 @@ import 'package:solution/utils/dimensions.dart';
 import 'package:solution/utils/neomorphism/neomorphism_box.dart';
 
 class ServiceProvider extends StatelessWidget {
-  const ServiceProvider({Key? key}) : super(key: key);
+  void Function() dilog;
+  ServiceProvider({Key? key,required this.dilog}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -180,7 +181,7 @@ class ServiceProvider extends StatelessWidget {
                     children: [
                       CupertinoButton(
                           padding: EdgeInsets.zero,
-                          onPressed: () {},
+                          onPressed: dilog,
                           child: NeuBox(
                               height: 100,
                               width: 40,
