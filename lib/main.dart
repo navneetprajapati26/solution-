@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solution/screens/auth/login/login.dart';
 import 'package:solution/screens/home/home.dart';
+import 'package:solution/screens/notification/NotificationScreen.dart';
 import 'package:solution/screens/service/ServiceScreen.dart';
 import 'package:solution/screens/service_provider_scareen/ServiceProviderScareen.dart';
 import 'package:solution/screens/splash/splash_screen.dart';
@@ -30,8 +31,8 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
-      // home: serviceProviderScareen(),
+      //home: SplashScreen(),
+       home: NotificationScreen(),
     );
   }
 }

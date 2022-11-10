@@ -191,22 +191,23 @@ class ServiceProvider extends StatelessWidget {
 
                 // chat btn and blue tik
                 Padding(
-                  padding: const EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
+                  padding: const EdgeInsets.all(0),
                   child: Column(
                     children: [
+                      CupertinoButton(padding: EdgeInsets.zero,child: Icon(Icons.favorite), onPressed: (){}),
                       CupertinoButton(
                           padding: EdgeInsets.zero,
                           onPressed: dilog,
                           child: NeuBox(
-                              height: 100,
+                              height: 60,
                               width: 40,
                               child: Container(
-                                height: 100,
+                                height: 60,
                                 width: 40,
                                 alignment: Alignment.center,
                                 child: Padding(
                                   padding: EdgeInsets.zero,
-                                  child: Icon(Icons.phone),
+                                  child: Icon(Icons.input_rounded,size: 20,),
                                 ),
                               )))
                     ],
