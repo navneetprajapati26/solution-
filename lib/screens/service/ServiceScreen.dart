@@ -14,11 +14,17 @@ class ServicesScreen extends StatefulWidget {
 }
 
 class _ServicesScreenState extends State<ServicesScreen> {
-
-  void services_raout() {
-    showDialog(context: context, builder: (BuildContext context){
-      return CustmDilogBox();
-    });
+  void dialog_raout() {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return CustmDilogBox(
+            hader_text: "Your current balance!",
+            body_text: "200 ₹",
+            Btn_1: () {},
+            Btn_2: () {},
+          );
+        });
   }
 
   @override
@@ -39,14 +45,16 @@ class _ServicesScreenState extends State<ServicesScreen> {
             physics: ScrollPhysics(),
             child: Column(
               children: [
-                SizedBox(height: 50,),
+                SizedBox(
+                  height: 50,
+                ),
                 ListView.builder(
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 6,
                     itemBuilder: (context, index) {
-                      return ServiceProvider(dilog: services_raout);
-                      })
+                      return ServiceProvider(dilog: dialog_raout);
+                    })
               ],
             ),
           ),
