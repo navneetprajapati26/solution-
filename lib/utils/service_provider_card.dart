@@ -5,7 +5,22 @@ import 'package:solution/utils/neomorphism/neomorphism_box.dart';
 
 class ServiceProvider extends StatelessWidget {
   void Function() dilog;
-  ServiceProvider({Key? key,required this.dilog}) : super(key: key);
+  String name;
+  String spatiality;
+  String language;
+  String exp;
+  String free;
+  String calls;
+  ServiceProvider(
+      {Key? key,
+      required this.dilog,
+      required this.name,
+      required this.spatiality,
+      required this.language,
+      required this.exp,
+      required this.free,
+      required this.calls})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +88,7 @@ class ServiceProvider extends StatelessWidget {
                             padding: const EdgeInsets.all(
                                 Dimensions.SIZE_EXTRA_SMALL),
                             child: Text(
-                              "3281 Calls",
+                              calls+" Calls",
                               style: TextStyle(fontSize: 6),
                             ),
                           )),
@@ -92,7 +107,7 @@ class ServiceProvider extends StatelessWidget {
                         padding:
                             const EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
                         child: Text(
-                          "Raj Narayana Singh",
+                          name,
                           style: TextStyle(
                               fontSize: Dimensions.SIZE_DEFAULT,
                               fontWeight: FontWeight.bold),
@@ -105,7 +120,7 @@ class ServiceProvider extends StatelessWidget {
                             right: Dimensions.SIZE_EXTRA_SMALL,
                             bottom: Dimensions.SIZE_EXTRA_SMALL),
                         child: Text(
-                          "Criminal, Constitutional, Corporate",
+                          spatiality,
                           style: TextStyle(
                             fontSize: Dimensions.SIZE_SMALL,
                           ),
@@ -118,7 +133,7 @@ class ServiceProvider extends StatelessWidget {
                             right: Dimensions.SIZE_EXTRA_SMALL,
                             bottom: Dimensions.SIZE_EXTRA_SMALL),
                         child: Text(
-                          "Hindi, English, Bhojpuri",
+                          language,
                           style: TextStyle(
                             fontSize: Dimensions.SIZE_SMALL,
                           ),
@@ -139,7 +154,7 @@ class ServiceProvider extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              "10 Years",
+                              exp,
                               style: TextStyle(
                                 fontSize: Dimensions.SIZE_SMALL,
                               ),
@@ -162,7 +177,7 @@ class ServiceProvider extends StatelessWidget {
                                   fontWeight: FontWeight.bold),
                             ),
                             Text(
-                              "10 min",
+                              free,
                               style: TextStyle(
                                 fontSize: Dimensions.SIZE_SMALL,
                               ),
@@ -193,9 +208,7 @@ class ServiceProvider extends StatelessWidget {
                                   padding: EdgeInsets.zero,
                                   child: Icon(Icons.phone),
                                 ),
-                              )
-                          )
-                      )
+                              )))
                     ],
                   ),
                 )

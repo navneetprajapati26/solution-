@@ -5,6 +5,7 @@ import 'package:solution/utils/services_card.dart';
 
 import '../../utils/custm_dilog_box.dart';
 import '../../utils/service_provider_card.dart';
+import '../service_provider_scareen/ServiceProviderScareen.dart';
 
 class ServicesScreen extends StatefulWidget {
   const ServicesScreen({Key? key}) : super(key: key);
@@ -22,9 +23,13 @@ class _ServicesScreenState extends State<ServicesScreen> {
             hader_text: "Your current balance!",
             body_text: "200 ₹",
             Btn_1: () {},
-            Btn_2: () {},
+            Btn_2: service_provider_scareen_raout,
           );
         });
+  }
+
+  void service_provider_scareen_raout() {
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>serviceProviderScareen()));
   }
 
   @override
@@ -53,7 +58,15 @@ class _ServicesScreenState extends State<ServicesScreen> {
                     shrinkWrap: true,
                     itemCount: 6,
                     itemBuilder: (context, index) {
-                      return ServiceProvider(dilog: dialog_raout);
+                      return ServiceProvider(
+                        dilog: dialog_raout,
+                        name: "Raj Narayana Singh",
+                        spatiality: "Criminal, Constitutional, Corporate",
+                        language: "Hindi, English, Bhojpuri",
+                        exp: "10 Year",
+                        free: "15 min",
+                        calls: "1532",
+                      );
                     })
               ],
             ),
