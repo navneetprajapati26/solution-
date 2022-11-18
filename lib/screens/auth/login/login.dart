@@ -23,6 +23,11 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Icon(
+                Icons.account_balance,
+                size: 100,
+                color: Color(0xFF343434),
+              ),
               //todo: login filed
               Padding(
                 padding: const EdgeInsets.all(Dimensions.SIZE_DEFAULT),

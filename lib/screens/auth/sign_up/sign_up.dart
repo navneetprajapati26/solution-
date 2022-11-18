@@ -26,6 +26,11 @@ class _Sign_upScreenState extends State<Sign_upScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Icon(
+                  Icons.account_balance,
+                  size: 100,
+                  color: Color(0xFF343434),
+                ),
                 //todo: Name filed
                 Padding(
                   padding: const EdgeInsets.only(left: Dimensions.SIZE_DEFAULT,top: Dimensions.SIZE_SMALL,right: Dimensions.SIZE_DEFAULT,bottom: Dimensions.SIZE_SMALL),

@@ -72,11 +72,14 @@ class _LikesScreenState extends State<LikesScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: BottemNavBar(
-        home_BTN: () {},
-        likes_BTN: () {},
-        serch_BTN: () {},
-        profile_BTN: () {},
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: BottemNavBar(
+          home_BTN: () {},
+          likes_BTN: () {},
+          serch_BTN: () {},
+          profile_BTN: () {},
+        ),
       ),
     );
   }

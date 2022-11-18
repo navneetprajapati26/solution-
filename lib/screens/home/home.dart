@@ -8,11 +8,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/bottem_navigetion_bar.dart';
 import '../../utils/custm_dilog_box.dart';
+import '../../utils/notification.dart';
 import '../../utils/service_provider_card.dart';
 import '../../utils/services_card.dart';
 import '../likes/LikesScreen.dart';
+import '../notification/NotificationScreen.dart';
+import '../profile/profile.dart';
 import '../service/ServiceScreen.dart';
 import '../service_provider_scareen/ServiceProviderScareen.dart';
+import '../wallet/WalletScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,9 +26,25 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  void Notification_raout() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => NotificationScreen()));
+  }
+
   void services_raout() {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => ServicesScreen()));
+  }
+
+  void profile_raout() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+  }
+
+  void wallet_raout() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => WalletScreen()));
   }
 
   void likes_raout() {
@@ -49,6 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (context) => serviceProviderScareen()));
   }
+
 
   List<String> Services_name = ["CA","Astrologers", "Docter", "Lawyers"];
   List<String> Services_logo = [
@@ -79,15 +100,14 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               onPressed: () {
                 //todo: notification at home
+                Notification_raout();
               }),
           CupertinoButton(
               child: Icon(
                 Icons.wallet,
                 color: Colors.grey[300],
               ),
-              onPressed: () {
-                //todo: wallet at home
-              })
+              onPressed: wallet_raout)
         ],
       ),
       body: SingleChildScrollView(
@@ -140,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
           home_BTN: () {},
           likes_BTN: likes_raout,
           serch_BTN: () {},
-          profile_BTN: () {},
+          profile_BTN: profile_raout,
         ),
       ),
     );
