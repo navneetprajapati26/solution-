@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:solution/screens/auth/login/login.dart';
+import 'package:solution/screens/dashboard/Dashboard.dart';
 import 'package:solution/screens/home/home.dart';
 import 'package:solution/screens/notification/NotificationScreen.dart';
 import 'package:solution/screens/profile/profile.dart';
@@ -25,15 +27,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
-     //  home: ProfileScreen(),
+      //home: SplashScreen(),
+      home: Dashboard(),
     );
   }
 }

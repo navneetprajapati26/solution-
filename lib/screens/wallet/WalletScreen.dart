@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../utils/bottem_navigetion_bar.dart';
 import '../../utils/dimensions.dart';
 class WalletScreen extends StatelessWidget {
   const WalletScreen({Key? key}) : super(key: key);
@@ -104,15 +102,6 @@ class WalletScreen extends StatelessWidget {
             ),
 
           ],
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: BottemNavBar(
-          home_BTN: () {},
-          likes_BTN: () {},
-          serch_BTN: () {},
-          profile_BTN: () {},
         ),
       ),
     );

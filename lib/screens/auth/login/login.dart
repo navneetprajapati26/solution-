@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
               CupertinoButton(
                 onPressed: () {
                   //todo: login btn
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()),);
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  HomeScreen()),);
                 },
                 child: NeuBox(
                   height: 50,

@@ -1,28 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../../utils/bottem_navigetion_bar.dart';
 import '../../utils/dimensions.dart';
 import '../../utils/neomorphism/neomorphism_box.dart';
-class ProfileScreen extends StatefulWidget {
+class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
-  @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
-}
-
-class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        backgroundColor: Color(0xFF343434),
-        title: Text(
-          "Profile",
-          style: TextStyle(color: Colors.grey[300]),
-        ),
-      ),
       body: Center(
         child: Column(
           children: [
@@ -62,7 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         bottom: Dimensions.SIZE_EXTRA_SMALL),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           "Balance : ",
                           style: TextStyle(
@@ -88,7 +74,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         bottom: Dimensions.SIZE_EXTRA_SMALL),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           "Time: ",
                           style: TextStyle(
@@ -109,17 +95,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
-          
+
           ],
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: BottemNavBar(
-          home_BTN: () {},
-          likes_BTN: () {},
-          serch_BTN: () {},
-          profile_BTN: () {},
         ),
       ),
     );

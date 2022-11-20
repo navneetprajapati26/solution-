@@ -4,14 +4,9 @@ import 'package:solution/utils/dimensions.dart';
 
 import '../../utils/neomorphism/neomorphism_box.dart';
 
-class serviceProviderScareen extends StatefulWidget {
+class serviceProviderScareen extends StatelessWidget {
   const serviceProviderScareen({Key? key}) : super(key: key);
 
-  @override
-  State<serviceProviderScareen> createState() => _serviceProviderScareenState();
-}
-
-class _serviceProviderScareenState extends State<serviceProviderScareen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

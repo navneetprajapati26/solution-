@@ -17,7 +17,7 @@ class Notification_card extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                children: [
+                children: const [
                   Icon(
                     Icons.account_circle_rounded,
                     color: Color(0xFF343434),
@@ -25,7 +25,7 @@ class Notification_card extends StatelessWidget {
                   ),
                   Padding(
                     padding:
-                    const EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
+                    EdgeInsets.all(Dimensions.SIZE_EXTRA_SMALL),
                     child: Text(
                       "Raj Narayana Singh",
                       style: TextStyle(
