@@ -88,7 +88,7 @@ class ServicesScreen extends StatelessWidget {
                         spatiality: "Criminal, Constitutional, Corporate",
                         language: "Hindi, English, Bhojpuri",
                         exp: "10 Year",
-                        free: "15 min",
+                        charge: "5 ₹/min",
                         calls: "1532",
                       );
                     })

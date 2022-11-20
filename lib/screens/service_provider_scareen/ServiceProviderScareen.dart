@@ -34,7 +34,7 @@ class serviceProviderScareen extends StatelessWidget {
             ),
             //todo: Discription
             Text(
-              "Discription",
+              "About me",
               style: TextStyle(
                   fontSize: Dimensions.SIZE_EXTRA_LARGE,
                   fontWeight: FontWeight.bold),
@@ -111,7 +111,7 @@ class serviceProviderScareen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  //todo:Free time
+                  //todo:charge time
                   Padding(
                     padding: const EdgeInsets.only(
                         left: Dimensions.SIZE_EXTRA_SMALL,
@@ -121,14 +121,14 @@ class serviceProviderScareen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Free: ",
+                          "Charge: ",
                           style: TextStyle(
                               fontSize: Dimensions.SIZE_DEFAULT,
                               fontWeight: FontWeight.bold
                           ),
                         ),
                         Text(
-                          "15 min",
+                          "5 ₹/min",
                           style: TextStyle(
                               fontSize: Dimensions.SIZE_DEFAULT,
                               fontWeight: FontWeight.bold
@@ -145,16 +145,27 @@ class serviceProviderScareen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 CupertinoButton(
+                  padding: EdgeInsets.only(left: 4,right: 4),
                     onPressed: (){},
-                    child: NeuBox(height: 65, width: 120, child: Container(
+                    child: NeuBox(height: 65, width: 100, child: Container(
                       alignment: Alignment.center,
                       child: Text("Call",style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,color: Colors.black),),
                     )
                     )
                 ),
                 CupertinoButton(
+                    padding: EdgeInsets.only(left: 4,right: 4),
                     onPressed: (){},
-                    child: NeuBox(height: 65, width: 120, child: Container(
+                    child: NeuBox(height: 65, width: 100, child: Container(
+                      alignment: Alignment.center,
+                      child: Text("Video Call",style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,color: Colors.black),),
+                    )
+                    )
+                ),
+                CupertinoButton(
+                    padding: EdgeInsets.only(left: 4,right: 4),
+                    onPressed: (){},
+                    child: NeuBox(height: 65, width: 100, child: Container(
                       alignment: Alignment.center,
                       child: Text("Chat",style: TextStyle(fontSize: Dimensions.SIZE_DEFAULT,color: Colors.black),),
                     )

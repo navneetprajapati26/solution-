@@ -8,6 +8,7 @@ import '../home/home.dart';
 import '../likes/LikesScreen.dart';
 import '../notification/NotificationScreen.dart';
 import '../profile/profile.dart';
+import '../search/SearchScreen.dart';
 import '../wallet/WalletScreen.dart';
 import 'dashboard_controller.dart';
 
@@ -17,7 +18,7 @@ class Dashboard extends StatelessWidget {
   final screens = [
     HomeScreen(),
     LikesScreen(),
-    ProfileScreen(),
+    SearchScreen(),
     ProfileScreen(),
   ];
   @override

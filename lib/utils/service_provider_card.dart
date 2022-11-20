@@ -9,7 +9,7 @@ class ServiceProvider extends StatelessWidget {
   String spatiality;
   String language;
   String exp;
-  String free;
+  String charge;
   String calls;
   ServiceProvider(
       {Key? key,
@@ -18,7 +18,7 @@ class ServiceProvider extends StatelessWidget {
       required this.spatiality,
       required this.language,
       required this.exp,
-      required this.free,
+      required this.charge,
       required this.calls})
       : super(key: key);
 
@@ -162,7 +162,7 @@ class ServiceProvider extends StatelessWidget {
                           ],
                         ),
                       ),
-                      //todo:Free time
+                      //todo:charge time
                       Padding(
                         padding: const EdgeInsets.only(
                             left: Dimensions.SIZE_EXTRA_SMALL,
@@ -171,13 +171,13 @@ class ServiceProvider extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              "Free: ",
+                              "Charge: ",
                               style: TextStyle(
                                   fontSize: Dimensions.SIZE_SMALL,
                                   fontWeight: FontWeight.bold),
                             ),
                             Text(
-                              free,
+                              charge,
                               style: TextStyle(
                                 fontSize: Dimensions.SIZE_SMALL,
                               ),
